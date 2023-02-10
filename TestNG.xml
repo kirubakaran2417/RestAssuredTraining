@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API testing suite">
+    <test name="Rest Assured API test">
+        <classes>
+            <class name="simpleframework.BasicApitest"></class>
+        </classes>
+    </test>
+</suite>

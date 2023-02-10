@@ -166,5 +166,19 @@ public class RestAssureddemo {
             Assert.assertEquals("user already exists",responsebody.Faultid);
             Assert.assertEquals("FAULT_USER_ALREADY_EXISTS",responsebody.Fault);
         }
+
+
+    }
+    @Test
+    public void getRequestcall(){
+        RestAssured.baseURI="https://reqres.in/api/users";
+
+        given().queryParam("page","2").header("Content-Type", "application/json")
+        .when().get()
+                .then().log().all()
+                .assertThat().header("Content-Type", "application/json; charset=UTF-8")
+                .header("Connection","keep-alive");
+
+
     }
 }
